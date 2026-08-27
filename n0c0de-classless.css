@@ -1,0 +1,264 @@
+/* n0c0.de - classless.css - n0 js c0de (or just a bit) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap');
+
+pre,
+code {
+  font-family: 'JetBrains Mono', Menlo, Monaco, "Courier New", monospace;
+}
+
+pre {
+  padding: 1rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  background-color: #080808;
+  border: 1px solid #222;
+  color: #aaa;
+}
+
+code {
+  background: #111;
+  padding: 0.15em 0.35em;
+  font-size: 0.9em;
+  color: #ccc;
+  border: 1px solid #222;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* links - n0c0 green */
+a,
+a:visited {
+  color: #00ff88;
+  text-decoration: none;
+  border-bottom: 1px dotted #00ff88;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #2ecc40;
+  border-bottom-style: solid;
+  background: rgba(0, 255, 136, 0.08);
+}
+
+html {
+  font-size: 15px;
+  background-color: #000;
+}
+
+@media screen and (min-width: 32rem) and (max-width: 48rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  html {
+    font-size: 17px;
+  }
+}
+
+html,
+body {
+  background-color: #000;
+  min-height: 100%;
+}
+
+body {
+  color: #bbb;
+  font-family: 'JetBrains Mono', Menlo, Monaco, "Courier New", monospace;
+  line-height: 1.85;
+  margin: 4rem auto 2rem;
+  max-width: 48rem;
+  padding: 1rem;
+}
+
+/* paragraphs */
+p {
+  font-size: 0.95rem;
+  margin-bottom: 1.3rem;
+  color: #888;
+  line-height: 1.7;
+}
+p strong, p b {
+  color: #ddd;
+}
+
+/* headings - cracktro vibe */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  margin: 2.2rem 0 0.8rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.1rem;
+  color: #fff;
+  border-left: 3px solid #ff0080;
+  padding-left: 0.8rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: #ddd;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+h5,
+h6 {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 1.5rem 0 0.5rem;
+}
+
+small {
+  font-size: 0.8em;
+  color: #555;
+}
+
+/* media */
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+  border: 1px solid #222;
+}
+
+img {
+  display: block;
+  margin: 1.5rem 0;
+  background: #080808;
+}
+
+/* blockquote - n0c0 style */
+blockquote {
+  border-left: 2px solid #ff0080;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  color: #888;
+  background: #080808;
+  font-style: italic;
+}
+
+/* lists */
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  color: #888;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+li::marker {
+  color: #00ff88;
+}
+
+/* forms - minimal n0c0 */
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: #080808;
+  color: #ccc;
+  border: 1px solid #222;
+  padding: 0.6rem 0.8rem;
+  width: 100%;
+}
+
+button, input[type="submit"] {
+  background: #111;
+  color: #00ff88;
+  border-color: #00ff88;
+  cursor: pointer;
+  width: auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+button:hover, input[type="submit"]:hover {
+  background: #00ff88;
+  color: #000;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #222;
+  margin: 2rem 0;
+}
